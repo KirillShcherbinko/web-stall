@@ -1,4 +1,4 @@
-import { EventEmitter } from "../base/events";
+import { IEvents } from "../base/events";
 
 // Интерфейс корзины товаров
 interface IBasketModel {
@@ -14,7 +14,7 @@ export default class BasketModel implements IBasketModel {
 	private _items: Map<string, number> = new Map(); // Изменено на private
 
 	// Принимаем на вход объект, который наследует класс отправки события 
-	constructor(protected events: EventEmitter) {}
+	constructor(protected events: IEvents) {}
 
 	// Геттер для items
 	public get items(): Map<string, number> {

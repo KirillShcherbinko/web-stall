@@ -8,6 +8,11 @@ export interface IProduct {
   price: number | null;
 }
 
+// Интерфейс для обработки событий 
+export interface IAction {
+  onClick(event: MouseEvent): void;
+}
+
 // Интерфейс для формы, заполняемой пользователем
 export interface IOrderForm {
   payment?: string;
