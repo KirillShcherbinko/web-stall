@@ -1,5 +1,5 @@
 // Интерфейс для товара
-interface IProduct {
+export interface IProduct {
   id: string;
   description: string;
   image: string;
@@ -9,7 +9,7 @@ interface IProduct {
 }
 
 // Интерфейс для формы, заполняемой пользователем
-interface IOrderForm {
+export interface IOrderForm {
   payment?: string;
   address?: string;
   email?: string;
@@ -17,7 +17,7 @@ interface IOrderForm {
 }
 
 // Интерфейс для провалидированных данных
-interface IValidatedOrderData {
+export interface IValidatedOrderData {
   payment: string;
   address: string;
   email: string;
@@ -25,19 +25,19 @@ interface IValidatedOrderData {
 }
 
 // Интерфейс для итоговых данных заказа
-interface IOrderData extends IValidatedOrderData {
+export interface IOrderData extends IValidatedOrderData {
   total: number;
   items: string[];
 }
 
 
 // Интерфейс для резыльтата заказа
-interface IOrderResult {
+export interface IOrderResult {
   id: string,
   total: number;
 }
 
 // Интерфейс для ошибки
-interface IErrorData {
+export interface IErrorData {
   message: string
 }
